@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #555;
+  color: #fff;
+}
+
+.header {
+ justify-self: anchor-center;
+}
+
+.hp_logo {
+  width: 50dvw;
+}
+
+.name_filter,
+.house_filter {
+  justify-self: center;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.card_mother {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picture {
+  max-width: 150px;
+}
+
+.card {
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
