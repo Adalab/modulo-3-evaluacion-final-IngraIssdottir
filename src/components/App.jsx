@@ -1,11 +1,10 @@
 import "../styles/App.scss";
 
-import logoHeader from "../images/logo-header.png"
-
 import { useEffect } from "react";
 import { useState } from "react";
 
 import CardItem from "./cardItem";
+import Header from "./Header";
 
 function App() {
 
@@ -37,9 +36,8 @@ function App() {
 
   return (
     <div>
-      <header className="header">
-        <img className="hp_logo" src={logoHeader} alt="Logo de Harry Potter" />
-      </header>
+      
+      <Header />
 
       <main className="main">
 
