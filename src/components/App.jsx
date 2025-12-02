@@ -12,7 +12,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   const [searchName, setSearchName] = useState ("");
-  const[searchHouse, setSearchHouse] = useState ("");
+  const[searchHouse, setSearchHouse] = useState ("Gryffindor");
 
   const handleSearchName = (ev) => {
     setSearchName(ev.target.value);
