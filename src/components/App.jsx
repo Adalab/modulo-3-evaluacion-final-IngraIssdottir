@@ -3,7 +3,7 @@ import "../styles/App.scss";
 import { useEffect } from "react";
 import { useState } from "react";
 
-import CardItem from "./cardItem";
+import CharacterList from "./CharacterList";
 import Header from "./Header";
 import Filters from "./Filters";
 
@@ -74,7 +74,7 @@ function App() {
         <ul className="card_mother">
           {filteredCharacters.map((character) => (
             
-          <CardItem key={character.id} character={character}/>))
+          <CharacterList key={character.id} character={character}/>))
           }
           
         </ul>
