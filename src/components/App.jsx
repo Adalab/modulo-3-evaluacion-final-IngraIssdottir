@@ -5,6 +5,8 @@ import logoHeader from "../images/logo-header.png"
 import { useEffect } from "react";
 import { useState } from "react";
 
+import CardItem from "./cardItem";
+
 function App() {
 
   const [characters, setCharacters] = useState([]);
@@ -65,12 +67,9 @@ function App() {
         
         <ul className="card_mother">
           {characters.map((character) => (
-            <li className="card">
-              <img className="picture" src={character.img} alt="" />
-              <p>Nombre: {character.name}</p>
-              <p>Especie: {character.species}</p>
-          </li>
-          ))}
+            
+          <CardItem key={character.id} character={character}/>))
+          }
           
         </ul>
       </main>
