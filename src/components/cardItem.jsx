@@ -7,7 +7,7 @@ function CardItem ({ character }) {
               <p>Nombre: {character.name}</p>
               <p>Especie: {character.species}</p>
           </li>
-    )
+    );
 }
 
 export default CardItem;

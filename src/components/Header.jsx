@@ -5,7 +5,7 @@ function Header () {
         <header className="header">
         <img className="hp_logo" src={logoHeader} alt="Logo de Harry Potter" />
       </header>
-    )
-};
+    );
+}
 
 export default Header

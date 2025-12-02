@@ -9,7 +9,7 @@ function CardImage ({ characterImage, characterName }) {
         className="picture"
         src={finalImage}
         alt={characterName} />
-    )
-};
+    );
+}
 
 export default CardImage

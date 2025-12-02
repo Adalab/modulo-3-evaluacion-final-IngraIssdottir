@@ -5,10 +5,33 @@ import { useState } from "react";
 
 import CardItem from "./cardItem";
 import Header from "./Header";
+import Filters from "./Filters";
 
 function App() {
 
   const [characters, setCharacters] = useState([]);
+
+  const [searchName, setSearchName] = useState ("");
+  const[searchHouse, setSearchHouse] = useState ("");
+
+  const handleSearchName = (ev) => {
+    setSearchName(ev.target.value);
+  };
+
+  const handleSearchHouse = (ev) => {
+    setSearchHouse(ev.target.value);
+  };
+
+  const filteredCharacters = characters
+    .filter((eachCharacter) =>
+      eachCharacter.name
+      .toLocaleLowerCase()
+      .includes(searchName.toLocaleLowerCase())
+  )
+    .filter((eachCharacter) => 
+  searchHouse === "" ? true : eachCharacter.house === searchHouse
+);
+
 
   useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
@@ -42,29 +65,14 @@ function App() {
       <main className="main">
 
 
-        <form action="">
-
-          <div className="name_filter">
-            <p>Buscar por nombre: </p>
-            <input type="text" />
-            <button>Buscar</button>
-          </div>
-
-          <div className="house_filter">
-            <p>Buscar por casa: </p>
-            <select name="" id="">
-              <option value="All">All</option>
-              <option value="Griffindor">Griffindor</option>
-              <option value="Hufflepuff">Hufflepuff</option>
-              <option value="Ravenclaw">Ravenclaw</option>
-              <option value="Slythering">Slythering</option>
-            </select>
-          </div>
-
-        </form>
+        <Filters
+        searchName={searchName}
+        handleSearchName={handleSearchName}
+        searchHouse={searchHouse}
+        handleSearchHouse={handleSearchHouse} />
         
         <ul className="card_mother">
-          {characters.map((character) => (
+          {filteredCharacters.map((character) => (
             
           <CardItem key={character.id} character={character}/>))
           }
