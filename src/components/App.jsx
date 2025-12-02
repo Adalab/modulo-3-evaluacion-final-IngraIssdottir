@@ -18,7 +18,7 @@ function App() {
       const cleanCharacters = data.map((eachCharacter) => ({
         //datos principales
         id: eachCharacter.id,
-        img: eachCharacter.image,
+        image: eachCharacter.image,
         name: eachCharacter.name,
         species: eachCharacter.species,
         //datos página detalle

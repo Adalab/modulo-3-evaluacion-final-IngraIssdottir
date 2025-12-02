@@ -1,7 +1,9 @@
+import CardImage from "./CardImage";
+
 function CardItem ({ character }) {
     return (
         <li className="card">
-              <img className="picture" src={character.img} alt="" />
+              <CardImage characterImage={character.image} CharacterName={character.name} />
               <p>Nombre: {character.name}</p>
               <p>Especie: {character.species}</p>
           </li>
