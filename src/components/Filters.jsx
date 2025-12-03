@@ -1,6 +1,6 @@
 function Filters ({ handleSearchName, searchName, searchHouse, handleSearchHouse }){
     return(
-        <form onSubmit={(ev) => ev.preventDefault()}>
+        <form className="filters" onSubmit={(ev) => ev.preventDefault()}>
 
          {/*FILTRO POR NOMBRE*/}
           <div className="name_filter">
@@ -18,7 +18,7 @@ function Filters ({ handleSearchName, searchName, searchHouse, handleSearchHouse
 
          {/*FILTRO POR CASA*/}
           <div className="house_filter">
-            <p>Buscar por casa: </p>
+            <p className="filter_text">Buscar por casa: </p>
             <select value={searchHouse}
             onChange={handleSearchHouse}
             name="house_filter_select" id="house_filter_select"> 
