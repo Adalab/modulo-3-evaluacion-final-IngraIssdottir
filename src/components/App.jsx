@@ -71,11 +71,15 @@ function App() {
                   handleSearchHouse={handleSearchHouse}
                 />
 
-                <ul className="card_mother">
-                  {filteredCharacters.map((character) => (
-                    <CharacterList key={character.id} character={character} />
-                  ))}
-                </ul>
+                {filteredCharacters.length === 0 ? (
+                  <p className="no_results">No se encontró ningún personaje</p>
+                ) : (
+                  <ul className="card_mother">
+                    {filteredCharacters.map((character) => (
+                      <CharacterList key={character.id} character={character} />
+                    ))}
+                  </ul>
+                )}
               </>
             }
           />
