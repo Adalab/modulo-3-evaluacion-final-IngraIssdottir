@@ -4,6 +4,8 @@ function Filters ({ handleSearchName, searchName, searchHouse, handleSearchHouse
 
          {/*FILTRO POR NOMBRE*/}
           <div className="name_filter">
+            <span className="search_character">Busca tu personaje:<br/></span>
+          
             <input
             className="name_filter_input" 
             type="text"
@@ -11,9 +13,8 @@ function Filters ({ handleSearchName, searchName, searchHouse, handleSearchHouse
             id="search_name"
             onInput={handleSearchName}
             value={searchName}
-            placeholder="search by name"
+            placeholder="Albus Dumbledore"
              />
-            <button>Buscar</button>
           </div>
 
          {/*FILTRO POR CASA*/}

@@ -5,15 +5,20 @@
 }
 
 :root {
-  font-family: "Jim Nightshade", cursive;
+  font-family: "Macondo Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
 }
 
 body {
   background-color: #555;
   color: #fff;
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/background2.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -24,10 +29,8 @@ body {
 }
 
 .hp_logo {
-  width: 50dvw;
+  width: 70dvw;
 }
-
-
 
 .main {
   padding: 2rem;
@@ -63,20 +66,47 @@ body {
   justify-items: center;
 }
 
-.name_filter {
+/*.name_filter {
   margin-bottom: 50px;
   border: solid gold;
   border-radius: 5px;
   background-color: transparentize($color: goldenrod, $amount: 0.5);
+}*/
+
+.name_filter_input {
+  border: solid gold;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: transparentize($color: goldenrod, $amount: 0.5);
+  color: white;
+}
+
+.search_character {
+  font-size: large;
+}
+
+.name_filter_input::placeholder {
+  color: white;
+  font-style: italic;
+  opacity: 0.5;
 }
 
 .house_filter {
   background-image: url(../images/logo-houses.png);
-  background-size: cover;
+  background-size: contain;
   text-align: center;
-  padding: 50px;
   font-size: larger;
   margin-top: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 180px;
+  padding-top: 5px;
+}
+
+.detail_card_data {
+  display: flex;
+  padding: 5px;
 }
 
 .detail {
@@ -87,21 +117,57 @@ body {
   background-color: transparentize($color: goldenrod, $amount: 0.5);
   font-size: x-large;
   display: flex;
+  flex-direction: column;
   min-width: 400px;
 }
 
 .detail_image {
-  margin: 0px 5px; 
+  margin: 0px 5px;
   width: 160px;
   height: 240px;
 }
 
+.back {
+  justify-self: end;
+  padding: 5px;
+  background-color: gold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back a {
+  text-decoration: none;
+  background-color: goldenrod;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+.back h2 {
+  color: rgb(145, 89, 10);
+}
+
 @media (min-width: 768px) {
-  
   .detail {
     max-width: 500px;
     justify-self: center;
   }
 
-  
+  .hp_logo {
+    max-width: 50dvw;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  .hp_logo {
+    max-width: 30dvw;
+  }
 }
