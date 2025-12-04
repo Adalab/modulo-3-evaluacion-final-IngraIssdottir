@@ -9,8 +9,8 @@ function CharacterCard ({ characterImage, characterName, characterSpecies }) {
             className="picture"
             src={finalImage}
             alt={characterName} />
-            <p>Nombre: {characterName}</p>
-            <p>Especie: {characterSpecies}</p></>
+            <p>{characterName}</p>
+            <p>{characterSpecies}</p></>
     );
 }
 
